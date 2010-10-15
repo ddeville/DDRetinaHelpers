@@ -11,13 +11,15 @@ int main (int argc, const char * argv[])
 		goto terminate ;
 	}
 	
+	// the origin and destination paths
 	NSString *fromPath ;
 	NSString *toPath ;
 	
+	// a copy of the file manager
 	NSFileManager *fileManager = [NSFileManager defaultManager] ;
 	
 	
-	// let's go through the arguments
+	// let's go through the command line arguments
 	NSUInteger arg = 1 ;
 	while (arg != argc)
 	{
