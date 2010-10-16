@@ -2,6 +2,8 @@ A couple of applications that will make your daily Cocoa coding life easier when
 
 At the moment, there are 2 applications:
 
-- DDRetinaExtension: a command line application that adds the @2x extension to a whole directory and subdirectories of images (PNG, JPG or JPEG).
+- DDRetinaExtension:
+a command line application that adds the @2x extension to a whole directory and subdirectories of images (PNG, JPG or JPEG).
 
-- DDRetinaResizing: a Mac OS X application that allows you to resize, add or remove the @2x extension to a whole bunch of images at a time.
+- DDRetinaResizing: (work in progress)
+a Mac OS X application that allows you to resize, add or remove the @2x extension to a whole bunch of images at a time.
