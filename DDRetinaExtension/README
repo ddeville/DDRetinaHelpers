@@ -1,0 +1,8 @@
+How to use:
+
+build the project
+cd to the directory where the app is built
+run the app by executing the following command:
+	./RetinaExtension --from /path/where/your/files/are/ --to /path/where/you/want/to/save/
+
+the app will copy all JPEG, JPG and PNG files to the destination path after having added the @2x extension
