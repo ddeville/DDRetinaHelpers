@@ -1,0 +1,7 @@
+A couple of applications that will make your daily Cocoa coding life easier when it comes to resizing and renaming images for the iPhone retina display.
+
+At the moment, there are 2 applications:
+
+- DDRetinaExtension: a command line application that adds the @2x extension to a whole directory and subdirectories of images (PNG, JPG or JPEG).
+
+- DDRetinaResizing: a Mac OS X application that allows you to resize, add or remove the @2x extension to a whole bunch of images at a time.
