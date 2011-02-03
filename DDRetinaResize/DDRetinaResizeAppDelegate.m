@@ -7,7 +7,6 @@
 //
 
 #import "DDRetinaResizeAppDelegate.h"
-#import "NSImage+MGCropExtensions.h"
 
 @implementation DDRetinaResizeAppDelegate
 
@@ -155,7 +154,12 @@
 					[sourceRep release] ;
 					
 					// get the bitmap image data as PNG
-					imageData = [newRep representationUsingType: NSPNGFileType properties: nil] ;
+					if ([extension isEqualToString: @"png"])
+						imageData = [newRep representationUsingType: NSPNGFileType properties: nil] ;
+					else if ([extension isEqualToString: @"jpg"] || [extension isEqualToString: @"jpeg"])
+						imageData = [newRep representationUsingType: NSJPEGFileType properties: nil] ;
+					else
+						imageData = nil ;
 					[newRep release] ;
 					
 					// create the image file at the destination path
