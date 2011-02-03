@@ -7,6 +7,7 @@
 //
 
 #import "DDRetinaResizeAppDelegate.h"
+#import "NSImage+MGCropExtensions.h"
 
 @implementation DDRetinaResizeAppDelegate
 
@@ -121,13 +122,43 @@
 					// create the new directory path
 					newPath = [toPath stringByAppendingPathComponent: path] ;
 					
-					// half the image
-					NSImage *newImage = [self resizeImageAtPath: completePath] ;
+					// first load the image data from file
+					NSURL *pathURL = [NSURL fileURLWithPath: completePath] ;
+					NSData *imageData = [NSData dataWithContentsOfURL: pathURL] ;
 					
-					// transform the image to NSData
-					NSData *imageData = [newImage TIFFRepresentation] ;
+					// get a bitmap representation of the image data
+					NSBitmapImageRep *sourceRep = [[NSBitmapImageRep alloc] initWithData: imageData] ;
 					
-					// copy the image to the new path
+					// create a new bitmap representation scaled down
+					NSBitmapImageRep *newRep = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes: NULL
+																					   pixelsWide: 0.5f * [sourceRep pixelsWide]
+																					   pixelsHigh: 0.5f * [sourceRep pixelsHigh]
+																					bitsPerSample: 8
+																				  samplesPerPixel: 4
+																						 hasAlpha: YES
+																						 isPlanar: NO
+																				   colorSpaceName: NSCalibratedRGBColorSpace
+																					  bytesPerRow: 0
+																					 bitsPerPixel: 0] ;
+
+					// save the graphics context, create a bitmap context and set it as current
+					[NSGraphicsContext saveGraphicsState] ;
+					NSGraphicsContext *context = [NSGraphicsContext graphicsContextWithBitmapImageRep: newRep] ;
+					[NSGraphicsContext setCurrentContext: context] ;
+					
+					// draw the bitmap image representation in it and restore the context
+					[sourceRep drawInRect: NSMakeRect(0.0f, 0.0f, 0.5f * [sourceRep pixelsWide], 0.5f * [sourceRep pixelsHigh])] ;
+					[NSGraphicsContext restoreGraphicsState] ;
+					
+					// set the size of the new bitmap representation
+					[newRep setSize: NSMakeSize(0.5f * sourceRep.size.width, 0.5f * sourceRep.size.height)] ;
+					[sourceRep release] ;
+					
+					// get the bitmap image data as PNG
+					imageData = [newRep representationUsingType: NSPNGFileType properties: nil] ;
+					[newRep release] ;
+					
+					// create the image file at the destination path
 					[fileManager createFileAtPath: newPath contents: imageData attributes: nil] ;
 					
 					// catch the error
@@ -137,36 +168,6 @@
 			}
 		}
 	}
-}
-
-- (NSImage *)resizeImageAtPath:(NSString *)path
-{
-	NSURL *pathURL = [NSURL fileURLWithPath: path] ;
-	NSImage *sourceImage = [[NSImage alloc] initWithContentsOfURL: pathURL] ;
-	[sourceImage setScalesWhenResized: YES] ;
-	CGSize imageSize = [sourceImage size] ;
-	CGSize smallSize = NSMakeSize(0.5f * imageSize.width, 0.5f * imageSize.height) ;
-	
-	NSImage *smallImage = nil ;
-	
-	// Report an error if the source isn't a valid image
-	if (![sourceImage isValid])
-	{
-		NSLog(@"Invalid image at path: %@", path) ;
-	}
-	else
-	{
-		smallImage = [[NSImage alloc] initWithSize: smallSize] ;
-		[smallImage lockFocus] ;
-		[sourceImage setSize: smallSize];
-		[[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh] ;
-		[sourceImage compositeToPoint: NSZeroPoint operation: NSCompositeCopy] ;
-		[smallImage unlockFocus] ;
-	}
-	
-	[sourceImage release] ;
-	
-	return [smallImage autorelease] ;
 }
 
 @end

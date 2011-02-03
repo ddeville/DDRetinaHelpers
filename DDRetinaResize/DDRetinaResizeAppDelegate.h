@@ -24,6 +24,5 @@
 @property (assign) IBOutlet NSButton *resizeButton ;
 
 - (IBAction)resizeButtonClicked:(id)sender ;
-- (NSImage *)resizeImageAtPath:(NSString *)path ;
 
 @end
