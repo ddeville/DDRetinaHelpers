@@ -1,0 +1,177 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 70338CB312689F87008C35FB /* DDRetinaExtension */;
+		activeTarget = 8DD76F960486AA7600D96B5E /* DDRetinaExtension */;
+		codeSenseManager = 70338CC012689FA9008C35FB /* Code sense */;
+		executables = (
+			70338CB312689F87008C35FB /* DDRetinaExtension */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					719,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					679,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 308847255;
+			PBXWorkspaceStateSaveDate = 308847255;
+		};
+		perUserProjectItems = {
+			70338CFB1268A22E008C35FB /* PBXTextBookmark */ = 70338CFB1268A22E008C35FB /* PBXTextBookmark */;
+			70338D071268A29F008C35FB /* PBXTextBookmark */ = 70338D071268A29F008C35FB /* PBXTextBookmark */;
+			70338D081268A29F008C35FB /* PBXTextBookmark */ = 70338D081268A29F008C35FB /* PBXTextBookmark */;
+			70338D091268A29F008C35FB /* PBXTextBookmark */ = 70338D091268A29F008C35FB /* PBXTextBookmark */;
+		};
+		sourceControlManager = 70338CBF12689FA9008C35FB /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	08FB7796FE84155DC02AAC07 /* DDRetinaExtension.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {985, 2145}}";
+			sepNavSelRange = "{596, 0}";
+			sepNavVisRange = "{0, 1377}";
+		};
+	};
+	32A70AAB03705E1F00C91783 /* DDRetinaExtension_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {897, 697}}";
+			sepNavSelRange = "{176, 0}";
+			sepNavVisRange = "{0, 176}";
+		};
+	};
+	70338CB312689F87008C35FB /* DDRetinaExtension */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = DDRetinaExtension;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	70338CBF12689FA9008C35FB /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	70338CC012689FA9008C35FB /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	70338CFB1268A22E008C35FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32A70AAB03705E1F00C91783 /* DDRetinaExtension_Prefix.pch */;
+		name = "DDRetinaExtension_Prefix.pch: 8";
+		rLen = 0;
+		rLoc = 176;
+		rType = 0;
+		vrLen = 176;
+		vrLoc = 0;
+	};
+	70338D071268A29F008C35FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* DDRetinaExtension.m */;
+		name = "DDRetinaExtension.m: 22";
+		rLen = 0;
+		rLoc = 596;
+		rType = 0;
+		vrLen = 1377;
+		vrLoc = 0;
+	};
+	70338D081268A29F008C35FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C6859EA3029092ED04C91782 /* DDRetinaExtension.1 */;
+		name = "DDRetinaExtension.1: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2264;
+		vrLoc = 0;
+	};
+	70338D091268A29F008C35FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C6859EA3029092ED04C91782 /* DDRetinaExtension.1 */;
+		name = "DDRetinaExtension.1: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2264;
+		vrLoc = 0;
+	};
+	8DD76F960486AA7600D96B5E /* DDRetinaExtension */ = {
+		activeExec = 0;
+		executables = (
+			70338CB312689F87008C35FB /* DDRetinaExtension */,
+		);
+	};
+	C6859EA3029092ED04C91782 /* DDRetinaExtension.1 */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {897, 962}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2264}";
+		};
+	};
+}
